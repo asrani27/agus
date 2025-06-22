@@ -49,7 +49,13 @@ Route::middleware(['auth', 'superadmin'])->group(function () {
 
     Route::get('/superadmin/laporan/bulan', [LaporanController::class, 'bulan']);
 
-    Route::get('/superadmin/user/print', [UserController::class, 'print']);
+    Route::get('/superadmin/user/print', [LaporanController::class, 'user']);
+    Route::get('/superadmin/kota/print', [LaporanController::class, 'kota']);
+    Route::get('/superadmin/kapal/print', [LaporanController::class, 'kapal']);
+    Route::get('/superadmin/jalur/print', [LaporanController::class, 'jalur']);
+    Route::get('/superadmin/pemesanan/print', [LaporanController::class, 'pemesanan']);
+    Route::get('/superadmin/booking/print', [LaporanController::class, 'booking']);
+
     Route::get('/superadmin/user', [UserController::class, 'index']);
     Route::get('/superadmin/user/add', [UserController::class, 'add']);
     Route::post('/superadmin/user/add', [UserController::class, 'store']);
