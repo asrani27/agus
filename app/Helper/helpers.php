@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Models\Booking;
 use App\Models\Jalur;
 use App\Models\Kapal;
@@ -49,6 +50,10 @@ function kapal()
 function kota()
 {
     return Kota::get();
+}
+function user()
+{
+    return User::get();
 }
 function jalur()
 {

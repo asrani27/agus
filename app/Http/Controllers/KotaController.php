@@ -20,6 +20,10 @@ class KotaController extends Controller
     }
     public function store(Request $req)
     {
+        if (Kota::where('kode', $req->kode)->first() != null) {
+            Session::flash('error', 'Kode Sudah ada');
+            return back();
+        }
         $param = $req->all();
         Kota::create($param);
         Session::flash('success', 'Berhasil Disimpan');

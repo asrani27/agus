@@ -5,34 +5,48 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tambah Data</h3>
+                <h3 class="card-title">Edit Data</h3>
 
             </div>
-            <form method="POST" action="/superadmin/tksk/add">
+            <form method="POST" action="/superadmin/pemesanan/edit/{{$data->id}}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama</label>
-                        <input type="text" name="nama" class="form-control" required>
+                        <label for="exampleInputEmail1">Kode pemesanan</label>
+                        <input type="text" name="kode" class="form-control" value="{{$data->kode}}">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Jabatan</label>
-                        <input type="text" name="jabatan" class="form-control" required>
+                        <label for="exampleInputEmail1">tanggal</label>
+                        <input type="date" name="tanggal" class="form-control" value="{{$data->tanggal}}">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">kecamatan</label>
-                        <input type="text" name="kecamatan" class="form-control" required>
+                        <label for="exampleInputEmail1">jam jemput </label>
+                        <input type="time" name="jam" class="form-control" value="{{$data->jam}}">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">kabupaten/kota</label>
-                        <input type="text" name="kabupaten" class="form-control" required>
+                        <label for="exampleInputEmail1">Tanggal berangkat </label>
+                        <input type="date" name="berangkat" class="form-control" value="{{$data->berangkat}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Tanggal pulang </label>
+                        <input type="date" name="pulang" class="form-control" value="{{$data->pulang}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">kode jalur</label>
+                        <select class="form-control" name="jalur_id">
+
+                            @foreach (jalur() as $item)
+                            <option value="{{$item->id}}" {{$data->jalur_id == $item->id ?
+                                'selected':''}}>{{$item->kode}}</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="/superadmin/tksk" class="btn btn-danger">Kembali</a>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a href="/superadmin/pemesanan" class="btn btn-danger">Kembali</a>
                 </div>
             </form>
             <!-- /.card-body -->

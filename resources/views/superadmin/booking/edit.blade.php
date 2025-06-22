@@ -8,53 +8,51 @@
                 <h3 class="card-title">Edit Data</h3>
 
             </div>
-            <form method="POST" action="/superadmin/distribusi/edit/{{$data->id}}">
+            <form method="POST" action="/superadmin/booking/edit/{{$data->id}}">
                 @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Tanggal</label>
-                        <input type="date" name="tanggal" value="{{$data->tanggal}}" class="form-control">
+                        <label for="exampleInputEmail1">Kode booking</label>
+                        <input type="text" name="kode" class="form-control" value="{{$data->kode}}">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama Penerima</label>
-                        <select class="form-control" name="penerima_id">
+                        <label for="exampleInputEmail1">tanggal</label>
+                        <input type="date" name="tanggal" class="form-control" value="{{$data->tanggal}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">jam </label>
+                        <input type="time" name="jam" class="form-control" value="{{$data->jam}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">status </label>
+                        <input type="text" name="status" class="form-control" value="{{$data->status}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">kode pemesanan</label>
+                        <select class="form-control" name="pemesanan_id">
 
-                            @foreach ($penerima as $item)
-                            <option value="{{$item->id}}" {{$data->penerima_id == $item->id ?
-                                'selected':''}}>{{$item->penerima}}</option>
+                            @foreach (pemesanan() as $item)
+                            <option value="{{$item->id}}" {{$data->pemesanan_id == $item->id ?
+                                'selected':''}}>{{$item->kode}}</option>
                             @endforeach
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Nama Petugas</label>
-                        <select class="form-control" name="petugas_id">
+                        <label for="exampleInputEmail1">kode user</label>
+                        <select class="form-control" name="user_id">
 
-                            @foreach ($petugas as $item)
-                            <option value="{{$item->id}}" {{$data->petugas_id == $item->id ?
-                                'selected':''}}>{{$item->nama}}</option>
+                            @foreach (user() as $item)
+                            <option value="{{$item->id}}" {{$data->user_id == $item->id ?
+                                'selected':''}}>{{$item->kode}} - {{$item->name}}</option>
                             @endforeach
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Pangan</label>
-                        <select class="form-control" name="pangan_id">
-
-                            @foreach ($pangan as $item)
-                            <option value="{{$item->id}}" {{$data->pangan_id == $item->id ?
-                                'selected':''}}>{{$item->nama}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">keterangan</label>
-                        <input type="text" name="keterangan" value="{{$data->keterangan}}" class="form-control">
                     </div>
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    <a href="/superadmin/distribusi" class="btn btn-danger">Kembali</a>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a href="/superadmin/booking" class="btn btn-danger">Kembali</a>
                 </div>
             </form>
             <!-- /.card-body -->

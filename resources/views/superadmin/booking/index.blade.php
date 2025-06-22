@@ -5,23 +5,26 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Distribusi Bantuan</h3>
+                <h3 class="card-title">Data booking</h3>
 
                 <div class="card-tools">
-                    <a href="/superadmin/distribusi/add" class='btn btn-sm btn-primary'>Tambah Data</a>
+                    <a href="/superadmin/booking/print" class='btn btn-sm btn-primary'><i class="fa fa-print"></i>
+                        Print</a>
+                    <a href="/superadmin/booking/add" class='btn btn-sm btn-primary'>Tambah Data</a>
                 </div>
             </div>
             <!-- /.card-header -->
             <div class="card-body table-responsive">
                 <table class="table table-hover text-nowrap table-sm table-bordered">
-                    <thead class="bg-primary">
+                    <thead class="bg-danger">
                         <tr>
                             <th>No</th>
+                            <th>Kode booking</th>
                             <th>Tanggal</th>
-                            <th>Nama Penerima</th>
-                            <th>Nama Petugas</th>
-                            <th>Pangan Yg Diterima</th>
-                            <th>keterangan</th>
+                            <th>Jam</th>
+                            <th>Status</th>
+                            <th>Kode Login</th>
+                            <th>Kode pemesanan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -29,16 +32,18 @@
                         @foreach ($data as $key => $item)
                         <tr style="font-size:14px">
                             <td>{{$key + 1}}</td>
-                            <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d M Y')}}</td>
-                            <td>{{$item->penerima == null ? '-' : $item->penerima->penerima}}</td>
-                            <td>{{$item->petugas == null ? '-' : $item->petugas->nama}}</td>
-                            <td>{{$item->pangan == null ? '-' : $item->pangan->nama}}</td>
-                            <td>{{$item->keterangan}}</td>
+                            <td>{{$item->kode}}</td>
+                            <td>{{$item->tanggal}}</td>
+                            <td>{{$item->jam}}</td>
+                            <td>{{$item->status}}</td>
+
+                            <td>{{$item->user == null ? null : $item->user->kode .' - '. $item->user->name }}</td>
+                            <td>{{$item->pemesanan == null ? null : $item->pemesanan->kode }}</td>
                             <td class="text-right">
 
-                                <a href="/superadmin/distribusi/edit/{{$item->id}}" class="btn btn-sm btn-success"><i
+                                <a href="/superadmin/booking/edit/{{$item->id}}" class="btn btn-sm btn-success"><i
                                         class="fa fa-edit"></i></a>
-                                <a href="/superadmin/distribusi/delete/{{$item->id}}" class="btn btn-sm btn-danger"
+                                <a href="/superadmin/booking/delete/{{$item->id}}" class="btn btn-sm btn-danger"
                                     onclick="return confirm('Yakin ingin dihapus?');"><i class="fa fa-trash"></i></a>
                             </td>
                         </tr>

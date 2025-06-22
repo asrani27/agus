@@ -20,6 +20,10 @@ class KapalController extends Controller
     }
     public function store(Request $req)
     {
+        if (Kapal::where('kode', $req->kode)->first() != null) {
+            Session::flash('error', 'Kode Sudah ada');
+            return back();
+        }
         $param = $req->all();
         Kapal::create($param);
         Session::flash('success', 'Berhasil Disimpan');

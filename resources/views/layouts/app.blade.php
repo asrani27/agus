@@ -84,7 +84,7 @@
                             <a href="/superadmin" class="nav-link {{request()->is('superadmin') ? 'active':''}}">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
-                                    DASHBOARD
+                                    Beranda
                                 </p>
                             </a>
                         </li>
@@ -93,7 +93,7 @@
                                 class="nav-link {{request()->is('superadmin/user*') ? 'active':''}}">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
-                                    admin
+                                    Admin
                                 </p>
                             </a>
                         </li>
@@ -102,7 +102,7 @@
                                 class="nav-link {{request()->is('superadmin/kota*') ? 'active':''}}">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
-                                    kota
+                                    Kota
                                 </p>
                             </a>
                         </li>
@@ -111,7 +111,7 @@
                                 class="nav-link {{request()->is('superadmin/kapal*') ? 'active':''}}">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
-                                    kapal
+                                    Kapal
                                 </p>
                             </a>
                         </li>
@@ -120,7 +120,7 @@
                                 class="nav-link {{request()->is('superadmin/jalur*') ? 'active':''}}">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
-                                    jalur
+                                    Jalur
                                 </p>
                             </a>
                         </li>
@@ -138,55 +138,19 @@
                                 class="nav-link {{request()->is('superadmin/booking*') ? 'active':''}}">
                                 <i class="nav-icon fas fa-inbox"></i>
                                 <p>
-                                    booking
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="/superadmin/laporan"
-                                class="nav-link {{request()->is('superadmin/laporan*') ? 'active':''}}">
-                                <i class="nav-icon fas fa-inbox"></i>
-                                <p>
-                                    LAPORAN
+                                    Booking
                                 </p>
                             </a>
                         </li>
                         @else
 
-                        <li class="nav-item">
-                            <a href="/user/dashboard"
-                                class="nav-link {{request()->is('user/dashboard') ? 'active':''}}">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    DASHBOARD
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/user/ajukan" class="nav-link {{request()->is('user/ajukan*') ? 'active':''}}">
-                                <i class="nav-icon fas fa-edit"></i>
-                                <p>
-                                    Ajukan Penerima BanSos
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/user/pengaduan"
-                                class="nav-link {{request()->is('user/pengaduan*') ? 'active':''}}">
-                                <i class="nav-icon fas fa-comment"></i>
-                                <p>
-                                    Pengaduan
-                                </p>
-                            </a>
-                        </li>
                         @endif
 
                         <li class="nav-item">
                             <a href="/logout" class="nav-link" onclick="return confirm('Yakin ingin keluar?');">
                                 <i class="nav-icon fas fa-arrow-right"></i>
                                 <p>
-                                    KELUAR
+                                    Keluar
                                 </p>
                             </a>
                         </li>

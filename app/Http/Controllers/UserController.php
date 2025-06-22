@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Pengaduan;
 use App\Models\Pengajuan;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -70,5 +71,11 @@ class UserController extends Controller
         User::find($id)->delete();
         Session::flash('success', 'Berhasil Dihapus');
         return redirect('/superadmin/user');
+    }
+    public function print()
+    {
+        $data = User::get();
+        $pdf = Pdf::loadView('superadmin.laporan.pdf_user', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
     }
 }

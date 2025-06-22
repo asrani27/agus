@@ -8,6 +8,8 @@
                 <h3 class="card-title">Data user</h3>
 
                 <div class="card-tools">
+                    <a href="/superadmin/user/print" class='btn btn-sm btn-primary'><i class="fa fa-print"></i>
+                        Print</a>
                     <a href="/superadmin/user/add" class='btn btn-sm btn-primary'>Tambah Data</a>
                 </div>
             </div>

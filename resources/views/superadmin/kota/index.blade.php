@@ -8,6 +8,8 @@
                 <h3 class="card-title">Data kota</h3>
 
                 <div class="card-tools">
+                    <a href="/superadmin/kota/print" class='btn btn-sm btn-primary'><i class="fa fa-print"></i>
+                        Print</a>
                     <a href="/superadmin/kota/add" class='btn btn-sm btn-primary'>Tambah Data</a>
                 </div>
             </div>

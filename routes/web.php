@@ -49,6 +49,7 @@ Route::middleware(['auth', 'superadmin'])->group(function () {
 
     Route::get('/superadmin/laporan/bulan', [LaporanController::class, 'bulan']);
 
+    Route::get('/superadmin/user/print', [UserController::class, 'print']);
     Route::get('/superadmin/user', [UserController::class, 'index']);
     Route::get('/superadmin/user/add', [UserController::class, 'add']);
     Route::post('/superadmin/user/add', [UserController::class, 'store']);
