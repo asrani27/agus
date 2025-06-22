@@ -3,263 +3,113 @@
 
 <head>
     <meta charset="utf-8">
+    <title>Logistica - Shipping Company Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>DINSOS</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap"
         rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="/flexstart/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/flexstart/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="/flexstart/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/flexstart/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="/flexstart/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
-    <link href="/flexstart/assets/css/main.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/kapal/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/kapal/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: FlexStart
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Updated: Nov 01 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/kapal/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/kapal/css/style.css" rel="stylesheet">
 </head>
 
-<body class="index-page">
-
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
-            <a href="index.html" class="logo d-flex align-items-center me-auto">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
-                <img src="/logo/logo-kalsel.png" alt="">
-                <h1 class="sitename">Dinas Sosial Prov Kal-Sel</h1>
-            </a>
-
-            <nav id="navmenu" class="navmenu">
-                {{-- <ul>
-                    <li><a href="#hero" class="active">Home<br></a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="#">Dropdown 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                        class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Dropdown 1</a></li>
-                                    <li><a href="#">Deep Dropdown 2</a></li>
-                                    <li><a href="#">Deep Dropdown 3</a></li>
-                                    <li><a href="#">Deep Dropdown 4</a></li>
-                                    <li><a href="#">Deep Dropdown 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Dropdown 2</a></li>
-                            <li><a href="#">Dropdown 3</a></li>
-                            <li><a href="#">Dropdown 4</a></li>
-                        </ul>
-                    </li>
-                    <li class="listing-dropdown"><a href="#"><span>Listing Dropdown</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li>
-                                <a href="#">Column 1 link 1</a>
-                                <a href="#">Column 1 link 2</a>
-                                <a href="#">Column 1 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 2 link 1</a>
-                                <a href="#">Column 2 link 2</a>
-                                <a href="#">Column 3 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 3 link 1</a>
-                                <a href="#">Column 3 link 2</a>
-                                <a href="#">Column 3 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 4 link 1</a>
-                                <a href="#">Column 4 link 2</a>
-                                <a href="#">Column 4 link 3</a>
-                            </li>
-                            <li>
-                                <a href="#">Column 5 link 1</a>
-                                <a href="#">Column 5 link 2</a>
-                                <a href="#">Column 5 link 3</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul> --}}
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
-
-            <a class="btn-getstarted flex-md-shrink-0" href="/login">Masuk</a>
-
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
         </div>
-    </header>
+    </div>
+    <!-- Spinner End -->
 
-    <main class="main">
 
-        <!-- Hero Section -->
-        <section id="hero" class="hero section">
-
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-                        <h1 data-aos="fade-up">BanSos Kal-Sel</h1>
-                        <p data-aos="fade-up" data-aos-delay="100">Aplikasi Sistem Online Distribusi Bantuan Sosial
-                            Pangan Daerah</p>
-                        <div class="d-flex flex-column flex-md-row" data-aos="fade-up" data-aos-delay="200">
-                            <a href="/login" class="btn-get-started">Masuk <i class="bi bi-arrow-right"></i></a>
-                            &nbsp;&nbsp;
-                            <a href="/daftar" class="btn-get-started">Daftar <i class="bi bi-edit"></i></a>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out">
-                        <img src="/flexstart/assets/img/hero-img.png" class="img-fluid animated" alt="">
-                    </div>
-                </div>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <a href="/" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+            <h2 class="mb-2 text-white">Pelabuhan</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="/" class="nav-item nav-link">Pelabuhan Pasar Lama Buntok</a>
+                <a href="/login" class="nav-item nav-link">Login</a>
             </div>
+            <h4 class="m-0 pe-lg-5 d-none d-lg-block"><i class="fa fa-headphones text-primary me-3"></i>+62 345 6789
+            </h4>
+        </div>
+    </nav>
+    <!-- Navbar End -->
 
-        </section><!-- /Hero Section -->
 
-        {{-- <section id="contact" class="contact section">
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative mb-5">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid" src="/kapal/img/carousel-1.jpg" alt="">
+                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+                    style="background: rgba(6, 3, 21, .5);">
+                    <div class="container">
+                        <div class="row justify-content-start">
+                            <div class="col-10 col-lg-8">
+                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Transportasi Kapal
+                                    Solution</h5>
+                                <h1 class="display-3 text-white animated slideInDown mb-4">#1 Pelabuhan Pasar Lama
+                                    Buntok</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">VJl. Niaga No.31, Buntok Kota, Kec. Dusun
+                                    Sel., Kabupaten Barito
+                                    Selatan, Kalimantan Tengah 73751.</p>
+                                <a href="/login"
+                                    class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Login</a>
 
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Contact</h2>
-                <p>Contact Us</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-
-                        <div class="row gy-4">
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="200">
-                                    <i class="bi bi-geo-alt"></i>
-                                    <h3>Address</h3>
-                                    <p>A108 Adam Street</p>
-                                    <p>New York, NY 535022</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="300">
-                                    <i class="bi bi-telephone"></i>
-                                    <h3>Call Us</h3>
-                                    <p>+1 5589 55488 55</p>
-                                    <p>+1 6678 254445 41</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="400">
-                                    <i class="bi bi-envelope"></i>
-                                    <h3>Email Us</h3>
-                                    <p>info@example.com</p>
-                                    <p>contact@example.com</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                            <div class="col-md-6">
-                                <div class="info-item" data-aos="fade" data-aos-delay="500">
-                                    <i class="bi bi-clock"></i>
-                                    <h3>Open Hours</h3>
-                                    <p>Monday - Friday</p>
-                                    <p>9:00AM - 05:00PM</p>
-                                </div>
-                            </div><!-- End Info Item -->
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-6">
-                        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                            data-aos-delay="200">
-                            <div class="row gy-4">
-
-                                <div class="col-md-6">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
-                                        required="">
-                                </div>
-
-                                <div class="col-md-6 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Your Email"
-                                        required="">
-                                </div>
-
-                                <div class="col-12">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
-                                        required="">
-                                </div>
-
-                                <div class="col-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message"
-                                        required=""></textarea>
-                                </div>
-
-                                <div class="col-12 text-center">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                                    <button type="submit">Send Message</button>
-                                </div>
 
                             </div>
-                        </form>
-                    </div><!-- End Contact Form -->
-
+                        </div>
+                    </div>
                 </div>
-
             </div>
 
-        </section> --}}
 
-    </main>
+        </div>
+    </div>
 
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="/flexstart/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/flexstart/assets/vendor/php-email-form/validate.js"></script>
-    <script src="/flexstart/assets/vendor/aos/aos.js"></script>
-    <script src="/flexstart/assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="/flexstart/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="/flexstart/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="/flexstart/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="/flexstart/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Main JS File -->
-    <script src="/flexstart/assets/js/main.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/kapal/lib/wow/wow.min.js"></script>
+    <script src="/kapal/lib/easing/easing.min.js"></script>
+    <script src="/kapal/lib/waypoints/waypoints.min.js"></script>
+    <script src="/kapal/lib/counterup/counterup.min.js"></script>
+    <script src="/kapal/lib/owlcarousel/owl.carousel.min.js"></script>
 
+    <!-- Template Javascript -->
+    <script src="/kapal/js/main.js"></script>
 </body>
 
 </html>

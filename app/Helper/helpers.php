@@ -1,5 +1,10 @@
 <?php
 
+use App\Models\Booking;
+use App\Models\Jalur;
+use App\Models\Kapal;
+use App\Models\Kota;
+use App\Models\Pemesanan;
 use Carbon\Carbon;
 use App\Models\Skpd;
 
@@ -37,7 +42,23 @@ function bulan()
 
     return $namaBulan;
 }
-function skpd()
+function kapal()
 {
-    return Skpd::get();
+    return Kapal::get();
+}
+function kota()
+{
+    return Kota::get();
+}
+function jalur()
+{
+    return Jalur::get();
+}
+function pemesanan()
+{
+    return Pemesanan::get();
+}
+function booking()
+{
+    return Booking::get();
 }
