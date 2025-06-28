@@ -78,20 +78,7 @@
             <span class="badge bg-teal"></span>
             <i class="fas fa-inbox"></i> Booking
         </a>
-        <a href="/superadmin/laporan" class="btn btn-app bg-danger" style="border-radius: 10px;
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    color: #6c757d;
-    font-size: 25px;
-    height: 90px;
-    margin: 0 0 25px 25px;
-    min-width: 80px;
-    padding: 15px 50px;
-    position: relative;
-    text-align: center;">
-            <span class="badge bg-teal"></span>
-            <i class="fas fa-inbox"></i> Laporan
-        </a>
+
     </div>
 </div>
 @endsection

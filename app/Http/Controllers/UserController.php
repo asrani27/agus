@@ -24,11 +24,11 @@ class UserController extends Controller
     }
     public function store(Request $req)
     {
-        if (User::where('kode', $req->kode) != null) {
+        if (User::where('kode', $req->kode)->first() != null) {
             Session::flash('error', 'Kode sudah ada');
             return back();
         }
-        if (User::where('username', $req->username) != null) {
+        if (User::where('username', $req->username)->first() != null) {
             Session::flash('error', 'Username sudah ada');
             return back();
         }
